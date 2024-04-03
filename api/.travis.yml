@@ -1,0 +1,17 @@
+language: shell
+
+services:
+  - docker
+
+script:
+  - docker build -t algofields/node .
+  - docker images algofields/node 
+
+# You can add additional steps such as running tests here
+
+# If you have a Docker registry where you want to push the image after building, you can add a deployment step:
+# deploy:
+#   provider: script
+#   script: bash docker-push.sh
+#   on:
+#     branch: master
